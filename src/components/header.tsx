@@ -4,7 +4,7 @@ import ToggleTheme from "./toggle-theme";
 
 export default function Header() {
   return (
-    <header className="h-14 border-b border-zinc-600">
+    <header className="h-14">
       <div className="flex items-center justify-between h-full px-4">
         <div>
           <Link href={"/"} className="flex items-center gap-2">
