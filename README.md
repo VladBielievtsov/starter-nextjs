@@ -1,4 +1,6 @@
-# Starter Next.js
+<h2 align="center">
+Starter Next.js
+</h2>
 
 <p align="center">
 <a href="https://starter-nextjs-ecru.vercel.app/">🖥 Preview</a>
