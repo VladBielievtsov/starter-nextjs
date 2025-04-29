@@ -26,6 +26,7 @@ export default function HomePage() {
         />
         <Button
           type="submit"
+          className="mt-4"
           disabled={!name}
         >
           Click
