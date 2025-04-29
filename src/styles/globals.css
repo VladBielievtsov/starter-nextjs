@@ -8,12 +8,12 @@
 :root {
   --background: #FFFFFF;
   --foreground: #101015;
-  --secondary: #262829;
+  --secondary: #f4f4f5;
   
   --lychee: #EEEEF5;
   --blackberry: #191923;
   --white: #FFFFFF;
-  --black: #101015;
+  --black: #09090a;
 
   --rosewater: #f5e0dc;
   --flamingo: #f2cdcd;
@@ -70,6 +70,7 @@
 :root[class='dark'] {
   --background: #101015;
   --foreground: #FFFFFF;
+  --secondary: #27272a;
 }
 
 body {
