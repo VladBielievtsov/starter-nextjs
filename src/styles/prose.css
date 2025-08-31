@@ -1,35 +1,128 @@
 @layer utility {
   .prose {
-    @apply text-foreground leading-7 font-sans max-w-none
+    will-change: transform;
+    @apply max-w-none leading-7 wrap-anywhere m-text text-text;
+  }
+
+  .prose p {
+    will-change: transform;
+    @apply text-subtext0
+  }
+
+  .prose strong,
+  .prose b {
+    @apply text-aqua
+  }
+
+  .prose em {
+    @apply text-skye
+  }
+
+  .prose code {
+    @apply bg-surface0 text-foreground dark:text-subtext0 py-1 px-1.5 rounded-md
+  } 
+
+  .prose code::before,
+  .prose code::after {
+    @apply hidden
+  }
+
+  .prose blockquote {
+    --border: var(--purple);
+    --icon: url('data:image/svg+xml;charset=utf-8,<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"> <path d="M16 36.4141V34C16 28.4772 20.4772 24 26 24C28.2091 24 30 22.2091 30 20C30 17.7909 28.2091 16 26 16C16.0589 16 8 24.0589 8 34V53C8 58.0351 11.383 62.2801 16 63.5859" stroke-linecap="round" stroke-linejoin="round" /> <path d="M16 36.4141C16.9537 36.1443 17.96 36 19 36H25C31.0751 36 36 40.9249 36 47V53C36 59.0751 31.0751 64 25 64H19C17.96 64 16.9537 63.8557 16 63.5859" stroke-linecap="round" stroke-linejoin="round" /> <path d="M52 36.4141V34C52 28.4772 56.4772 24 62 24C64.2091 24 66 22.2091 66 20C66 17.7909 64.2091 16 62 16C52.0589 16 44 24.0589 44 34V53C44 58.0351 47.383 62.2801 52 63.5859" stroke-linecap="round" stroke-linejoin="round" /> <path d="M52 36.4141C52.9537 36.1443 53.96 36 55 36H61C67.0751 36 72 40.9249 72 47V53C72 59.0751 67.0751 64 61 64H55C53.96 64 52.9537 63.8557 52 63.5859" stroke-linecap="round" stroke-linejoin="round" /> </svg>');
+    @apply border-overlay0 m-text pl-4 border-l-4 transition;
+  }
+
+  .prose blockquote p {
+    @apply text-subtext1;
+  }
+
+  .prose blockquote.quote p {
+    @apply text-subtext0
+  }
+
+  .prose blockquote.quote p.quote__body {
+    @apply italic;
+  }
+
+  .prose blockquote h6::before {
+    content: "";
+    mask: var(--icon);
+    background-color: var(--border);
+    @apply inline-block h-4 aspect-square align-middle m-0 mr-3.5;
+  }
+
+  .prose blockquote h6 {
+    color: var(--border);
   }
   
   .prose>:last-child {
     margin-bottom: 0;
   }
+
+  .prose h1 {
+    margin: 2.25rem 0 .8rem;
+    font-size: 1.75rem;
+    @apply text-text;
+  }
+
+  .prose h2 {
+    margin: 1.9rem 0 .8rem;
+    font-size: 1.4rem;
+    @apply text-text;
+  }
+
+  .prose h3 {
+    margin: 1.62rem 0 .8rem;
+    font-size: 1.12rem;
+    @apply text-text;
+  }
+
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    margin: 1.5rem 0 .8rem;
+    font-size: 1rem;
+    @apply text-text;
+  }
+
   
   .prose>:first-child {
     margin-top: 0;
   }
   
-  .prose h1 {
-    @apply text-foreground font-bold text-4xl mt-8 mb-4 leading-tight;
+  .prose ul {
+    list-style-position: inside;
+    list-style-type: '- ';
   }
-  .prose h2 {
-    @apply text-foreground font-bold text-2xl mt-8 mb-4 leading-tight;
+
+  .prose ul li {
+    margin: .6rem 0;
+
+    padding: 0 0 0 .5rem;
   }
-  .prose h3 {
-    @apply text-foreground font-bold text-xl mt-8 mb-4 leading-tight;
-  }
-  .prose h4 {
-    @apply text-foreground font-bold text-base mt-8 mb-4 leading-tight;
-  }
-  
-  .prose p {
-    @apply my-5
+
+  .prose ul li ::marker {
+    color: var(--overlay0);
   }
   
+  .prose ul li p {
+    display: inline;
+  }
+
+  .prose hr {
+    background-color: var(--surface1);
+    border: none;
+    width: 100%;
+    height: 1px;
+    margin: 2rem auto;
+  }
+
   .prose a {
-    @apply text-foreground no-underline border-b border-foreground/20 hover:border-mauve hover:text-mauve transition duration-300;
+    @apply text-foreground no-underline border-b border-subtext0 transition duration-300;
+  }
+
+  .prose a:hover {
+    @apply border-foreground; 
   }
 }
-

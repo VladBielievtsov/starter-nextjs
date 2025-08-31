@@ -16,9 +16,7 @@ export default async function RootLayout({
         <meta name="theme-color" content="#EEEEF5" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#191923" media="(prefers-color-scheme: dark)" />
       </head>
-      <body
-        className={`antialiased`}
-      >
+      <body>
         <Providers>
           <Header />
           {children}

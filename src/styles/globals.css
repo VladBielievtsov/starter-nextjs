@@ -3,78 +3,133 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@import "./fonts.css";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #FFFFFF;
-  --foreground: hsl(224, 7%, 4%);
-  --secondary: #f4f4f5;
+  --red: oklch(0.7301 0.1446 19.69);
+  --orange: oklch(0.7876 0.1116 40.57);
+  --yellow: oklch(0.8762 0.0831 77.66);
+  --lime: oklch(0.903 0.073 117.07);
+  --green: oklch(0.8858 0.0689 129.37);
+  --aqua: oklch(0.8753 0.0605 162.16);
+  --skye: oklch(0.8864 0.0545 180.3);
+  --snow: oklch(0.8596 0.0475 218.6);
+  --blue: oklch(0.8327 0.0558 257.74);
+  --purple: oklch(0.8338 0.0775 302.5);
+  --pink: oklch(0.8639 0.0753 336.32);
+  --cherry: oklch(0.8921 0.0538 342.78);
+  --text: oklch(0.9768 0.0223 302.5);
+  --subtext1: oklch(0.8113 0.0352 302.5);
+  --subtext0: oklch(0.7445 0.0358 302.5);
+  --overlay2: oklch(0.6774 0.0307 302.5);
+  --overlay1: oklch(0.6049 0.0276 302.5);
+  --overlay0: oklch(0.5057 0.021 302.5);
+  --surface2: oklch(0.4499 0.0186 302.5);
+  --surface1: oklch(0.3678 0.0149 302.5);
+  --surface0: oklch(0.2983 0.0144 302.5);
+  --base: oklch(0.2589 0.0115 302.5);
+  --mantle: oklch(0.2312 0.0094 302.5);
+  --crust: oklch(0.2226 0.0095 302.5);
   
-  --lychee: #EEEEF5;
-  --blackberry: #191923;
-  --white: #FFFFFF;
-  --black: #09090a;
+  --background: oklch(0.1442 0.0023 302.5);
+  --foreground: oklch(1 0 0);
 
-  --rosewater: #f5e0dc;
-  --flamingo: #f2cdcd;
-  --pink: #f5c2e7;
-  --mauve: #cba6f7;
-  --red: #f38ba8;
-  --maroon: #eba0ac;
-  --peach: #fab387;
-  --yellow: #f9e2af;
-  --green: #a6e3a1;
-  --teal: #94e2d5;
-  --sky: #89dceb;
-  --sapphire: #74c7ec;
-  --blue: #89b4fa;
-  --lavender: #b4befe;
+  --white: oklch(1 0 0);
+  --black: oklch(0.1403 0.0022 302.5);
+
+  --selection: oklch(0.8625 0.0663 275.53 / 0.2);
 
   --font-sourgummy: "Sour Gummy", sans-serif;
-  --font-sans: Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"
+  --font-sans: Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
 
+  --font-sans-serif--system: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+  --font-serif--system: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-mono--system: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+  --font-sans-serif: 'Maple Mono', var(--font-sans-serif--system);
+  --font-mono: 'Maple Mono', var(--font-mono--system);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-secondary: var(--secondary);
 
-  --color-lychee: var(--lychee);
-  --color-blackberry: var(--blackberry);
   --color-white: var(--white);
   --color-black: var(--black);
 
-  --color-rosewater: var(--rosewater);
-  --color-flamingo: var(--flamingo);
-  --color-pink: var(--pink);
-  --color-mauve: var(--mauve);
   --color-red: var(--red);
-  --color-maroon: var(--maroon);
-  --color-peach: var(--peach);
+  --color-orange: var(--orange);
   --color-yellow: var(--yellow);
+  --color-lime: var(--lime);
   --color-green: var(--green);
-  --color-teal: var(--teal);
-  --color-sky: var(--sky);
-  --color-sapphire: var(--sapphire);
+  --color-aqua: var(--aqua);
+  --color-skye: var(--skye);
+  --color-snow: var(--snow);
   --color-blue: var(--blue);
-  --color-lavender: var(--lavender);
+  --color-purple: var(--purple);
+  --color-pink: var(--pink);
+  --color-cherry: var(--cherry);
+  --color-text: var(--text);
+  --color-subtext1: var(--subtext1);
+  --color-subtext0: var(--subtext0);
+  --color-overlay2: var(--overlay2);
+  --color-overlay1: var(--overlay1);
+  --color-overlay0: var(--overlay0);
+  --color-surface2: var(--surface2);
+  --color-surface1: var(--surface1);
+  --color-surface0: var(--surface0);
+  --color-base: var(--base);
+  --color-mantle: var(--mantle);
+  --color-crust: var(--crust);
 
+  --color-selection: var(--selection);
+  
   --font-sans: var(--font-sans);
   --font-sourgummy: var(--font-sourgummy);
+  --font-sans-serif: var(--font-sans-serif);
 
-  --spacing-article: 600px;
-  --spacing-content: 1000px;
+  --spacing-article: 680px;
+  --spacing-content: 700px;
+
+  --margin-text: .8rem;
 }
 
-:root[class='dark'] {
-  --background: hsl(224, 7%, 4%);
-  --foreground: #FFFFFF;
-  --secondary: #27272a;
+:root[class='light'] {
+  --red: oklch(0.7301 0.2503 19.69);
+  --orange: oklch(0.7876 0.2503 40.57);
+  --yellow: oklch(0.8762 0.2503 77.66);
+  --lime: oklch(0.903 0.2503 117.07);
+  --green: oklch(0.8858 0.2503 129.37);
+  --aqua: oklch(0.8753 0.2503 162.16);
+  --skye: oklch(0.8864 0.2503 180.3);
+  --snow: oklch(0.8596 0.2503 218.6);
+  --blue: oklch(0.8327 0.2503 257.74);
+  --purple: oklch(0.5547 0.2503 297.02);
+  --pink: oklch(0.8639 0.2503 336.32);
+  --cherry: oklch(0.8921 0.2503 342.78);
+  --text: oklch(0.3768 0.0223 302.5);
+  --subtext1: oklch(0.4113 0.0352 302.5);
+  --subtext0: oklch(0.4445 0.0358 302.5);
+  --surface0: oklch(0.8983 0.0144 302.5);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.1442 0.0023 302.5);
+
+  --selection: oklch(0.8625 0.0663 275.53 / 5);
 }
 
 body {
-  @apply bg-background text-foreground font-sans;
+  @apply bg-background text-text font-sans-serif;
+}
+
+pre,
+code {
+  font-family: var(--font-code), ui-monospace, monospace;
+  font-variant-ligatures: none;
+}
+
+*::selection {
+  @apply bg-selection
 }
 
 @import "./prose.css";

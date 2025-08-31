@@ -22,7 +22,7 @@ export default function HomePage() {
           onChange={(e) => setName(e.target.value)}
           value={name}
           placeholder="What's your name?"
-          className="flex h-9 w-full rounded-md border border-foreground bg-transparent px-3 py-1 text-base shadow-sm transition-colors placeholder:text-foreground/60 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-foreground md:text-sm"
+          className="flex h-9 w-full rounded-md border border-foreground bg-transparent px-3 py-1 text-foreground shadow-sm transition-colors placeholder:text-foreground/60 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-foreground md:text-sm"
         />
         <Button
           type="submit"
